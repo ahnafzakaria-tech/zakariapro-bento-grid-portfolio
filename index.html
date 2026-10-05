@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://devdeepsaha.in/#person",
+            "name": "Devdeep Saha",
+            "alternateName": "Devdeep",
+            "givenName": "Devdeep",
+            "familyName": "Saha",
+            "birthPlace": "India",
+            "nationality": "Indian",
+            "jobTitle": "Web Developer",
+            "description": "Creative developer exploring web development, design and interactive experiences.",
+            "url": "https://devdeepsaha.in/",
+            "image": "https://devdeepsaha.in/pfp/dev1.png",
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "Abacus Institute of Engineering and Management"
+            },
+            "knowsAbout": [
+              "Web Development",
+              "React",
+              "UI Design",
+              "Interactive Experiences",
+              "Frontend Development",
+              "Creative Coding"
+            ],
+            "sameAs": [
+              "https://www.linkedin.com/in/devdeep-saha-3b4570260/",
+              "https://github.com/devdeepsaha",
+              "https://instagram.com/devdeepsaha"
+            ],
+            "mainEntityOfPage": {
+              "@id": "https://devdeepsaha.in/#website"
+            }
+          },
+
+          {
+            "@type": "Organization",
+            "@id": "https://devdeepsaha.in/#organization",
+            "name": "Devdeep Saha",
+            "url": "https://devdeepsaha.in/",
+            "logo": "https://devdeepsaha.in/banner-v2.png",
+            "founder": {
+              "@id": "https://devdeepsaha.in/#person"
+            }
+          },
+
+          {
+            "@type": "WebSite",
+            "@id": "https://devdeepsaha.in/#website",
+            "url": "https://devdeepsaha.in/",
+            "name": "Devdeep Saha Portfolio",
+            "publisher": {
+              "@id": "https://devdeepsaha.in/#organization"
+            },
+            "hasPart": [
+              { "@id": "https://devdeepsaha.in/projects" },
+              { "@id": "https://devdeepsaha.in/blog" },
+              { "@id": "https://devdeepsaha.in/learning" },
+              { "@id": "https://devdeepsaha.in/story" }
+            ]
+          },
+
+          {
+            "@type": "ItemList",
+            "@id": "https://devdeepsaha.in/#sections",
+            "name": "Portfolio Sections",
+            "description": "Bento-grid sections of the Devdeep Saha portfolio. Each item corresponds to a tile on the home page and, where available, is deep-linkable via the URL hash.",
+            "itemListElement": [
+              {
+                "@type": "SiteNavigationElement",
+                "position": 1,
+                "name": "About",
+                "description": "About Devdeep Saha — designer who codes, based in Kolkata.",
+                "url": "https://devdeepsaha.in/"
+              },
+              {
+                "@type": "SiteNavigationElement",
+                "position": 2,
+                "name": "Tech Stack",
+                "description": "React, Next.js, Laravel, Flask, Tailwind, TypeScript, MySQL, Android, Flutter, HTML, CSS, JavaScript.",
+                "url": "https://devdeepsaha.in/"
+              },
+              {
+                "@type": "SiteNavigationElement",
+                "position": 3,
+                "name": "Resume",
+                "description": "Education, experience, and certifications. Immediate joining available.",
+                "url": "https://devdeepsaha.in/"
+              },
+              {
+                "@type": "SiteNavigationElement",
+                "@id": "https://devdeepsaha.in/projects",
+                "position": 4,
+                "name": "Selected Projects",
+                "description": "Web, 3D, and graphics projects. Filterable by category. Each project is deep-linkable.",
+                "url": "https://devdeepsaha.in/projects"
+              },
+              {
+                "@type": "SiteNavigationElement",
+                "position": 5,
+                "name": "My Evolution",
+                "description": "Timeline of the journey from student to designer-developer.",
+                "url": "https://devdeepsaha.in/"
+              },
+              {
+                "@type": "SiteNavigationElement",
+                "@id": "https://devdeepsaha.in/blog",
+                "position": 6,
+                "name": "Playground",
+                "description": "Hobbies and experiments — audio, video, images, PDFs, and blog posts.",
+                "url": "https://devdeepsaha.in/blog"
+              },
+              {
+                "@type": "SiteNavigationElement",
+                "@id": "https://devdeepsaha.in/learning",
+                "position": 7,
+                "name": "Currently Learning",
+                "description": "Topics and skills currently being studied.",
+                "url": "https://devdeepsaha.in/learning"
+              },
+              {
+                "@type": "SiteNavigationElement",
+                "position": 8,
+                "name": "Contact",
+                "description": "Email, GitHub, LinkedIn, and Instagram.",
+                "url": "https://devdeepsaha.in/"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-61S2EXE0DP"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-61S2EXE0DP");
+    </script>
+    <meta charset="UTF-8" />
+    <!--
+      CRITICAL: forces every relative URL in the app (asset paths inside
+      data files like "./projects/foo.jpg", plus favicon, plus any src
+      that doesn't start with "/") to resolve against the site root
+      regardless of what the current URL path happens to be. Without this,
+      landing on /projects/arova-technologies (or any non-root path) makes
+      the browser resolve "./projects/foo.jpg" to
+      "/projects/arova-technologies/projects/foo.jpg" — 404 everywhere.
+    -->
+    <base href="/" />
+    <meta
+      name="google-site-verification"
+      content="PAYCmm-w6R0jL1vy_FvKzmcHT5874IS4KVVe1rbLXNQ"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Devdeep Saha - Portfolio | Web Developer & Designer</title>
+    <meta
+      name="title"
+      content="Devdeep Saha - Portfolio | Web Developer & Designer"
+    />
+    <meta
+      name="description"
+      content="This is the portfolio of Devdeep Saha — showcasing projects, experiments, and ideas across web development, design, and creative technology."
+    />
+
+    <link rel="canonical" href="https://devdeepsaha.in/" />
+    <meta name="author" content="Devdeep Saha" />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://devdeepsaha.in/" />
+    <meta property="og:title" content="Devdeep Saha | Portfolio" />
+    <meta
+      property="og:description"
+      content="This is the portfolio of Devdeep Saha — showcasing projects, experiments, and ideas across web development, design, and creative technology."
+    />
+    <meta property="og:image" content="https://devdeepsaha.in/banner-v2.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://devdeepsaha.in/" />
+    <meta property="twitter:title" content="Devdeep Saha | Portfolio" />
+    <meta
+      property="twitter:description"
+      content="This is the portfolio of Devdeep Saha — showcasing projects, experiments, and ideas across web development, design, and creative technology."
+    />
+    <meta
+      property="twitter:image"
+      content="https://devdeepsaha.in/banner-v2.png"
+    />
+
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/js/leon.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <main>
+        <h1>Devdeep Saha — Designer Who Codes</h1>
+        <p>
+          Portfolio of Devdeep Saha, a designer and web developer based in
+          Kolkata, India. This site is built with React and needs JavaScript
+          for the full experience. Below is a text index of every section for
+          crawlers and readers without JavaScript.
+        </p>
+        <nav aria-label="Portfolio sections">
+          <ul>
+            <li>About — designer who codes, based in Kolkata, IN.</li>
+            <li>
+              Tech Stack — React, Next.js, Laravel, Flask, Tailwind, TypeScript,
+              MySQL, Android Studio, Flutter, HTML, CSS, JavaScript.
+            </li>
+            <li>Resume — education, experience, certifications. Available for immediate joining.</li>
+            <li>
+              <a href="https://devdeepsaha.in/#projects">Selected Projects</a> —
+              web, 3D, and graphics work. Each project has a deep-linkable URL
+              of the form <code>#projects/&lt;id&gt;</code>.
+            </li>
+            <li>My Evolution — timeline of growth as a designer-developer.</li>
+            <li>
+              <a href="https://devdeepsaha.in/#playground">Playground</a> —
+              hobbies and experiments: audio, video, images, PDFs, and blog posts.
+              Individual items deep-link via <code>#playground/&lt;tab&gt;/&lt;id&gt;</code>.
+            </li>
+            <li>
+              <a href="https://devdeepsaha.in/#learning">Currently Learning</a> —
+              topics and skills currently being studied.
+            </li>
+            <li>
+              Contact —
+              <a href="mailto:devdeep120205@gmail.com">devdeep120205@gmail.com</a>,
+              <a href="https://github.com/devdeepsaha">GitHub</a>,
+              <a href="https://www.linkedin.com/in/devdeep-saha-3b4570260/">LinkedIn</a>,
+              <a href="https://instagram.com/devdeepsaha">Instagram</a>.
+            </li>
+          </ul>
+        </nav>
+      </main>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

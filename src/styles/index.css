@@ -1,0 +1,33 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+@layer utilities {
+  /* 1. Chrome, Edge, Safari */
+  ::-webkit-scrollbar {
+    width: 14px; /* Wider area to allow for "padding" */
+    height: 14px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent; /* ESSENTIAL: Makes the square corner invisible */
+    margin: 4px; /* Pushes the track away from the very edge */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted-foreground) / 0.3); /* Adaptive Color */
+    border-radius: 20px;       /* The Roundness */
+    border: 4px solid transparent; /* The "Padding" around the pill */
+    background-clip: content-box;  /* THE MAGIC: Shrinks the color to inside the border */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--muted-foreground) / 0.6); /* Darker on hover */
+  }
+  
+  /* 2. Firefox (Best Effort - Firefox doesn't support full custom styling) */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted-foreground) / 0.3) transparent;
+  }
+}

@@ -1,0 +1,176 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* LIGHT MODE - "Clean Studio" */
+  --background: #fbf7f6; /* Snow */
+  --foreground: #11151c; /* Ink Black */
+  --card: #ffffff;
+  --card-foreground: #11151c;
+  --primary: #11151c; /* Black buttons in light mode */
+  --primary-foreground: #d8ffc7; /* Green text on black buttons */
+  --accent: #d8ffc7; /* Green is the primary accent */
+  --accent-foreground: #11151c;
+  --border: rgba(17, 21, 28, 0.1);
+  --muted: #f4f1f0;
+  --muted-foreground: #6b7280;
+  --green: #059669;
+  --b: #6434e9ff;
+  --v: #2c7ce5ff;
+  --r: #49cc5cff;
+  --o: #f8c421ff;
+  --y: #fb6640ff;
+  --c: #f82553ff;
+  --white: #ffffff;
+
+  /* Tangram-specific tokens (light) */
+  --tile: #ffffff;
+  --tile-border: rgba(17, 21, 28, 0.1);
+  --text-secondary: #4b5563;
+  --skills-bg: #d8ffc7; /* mint green */
+  --skills-fg: #11151c;
+  --skills-marquee: #4F8A46;
+  --cta-bg: #111111;
+  --cta-fg: #ffffff;
+  --cta-green: #16A34A;
+  --journey-accent: #059669;
+  --amber: #B45309;
+}
+
+/* Update only the .dark section in your theme.css */
+
+.dark {
+  --background: #0F0F0E;
+  --foreground: #F5F5F4;
+  --card: #1A1A19;
+  --card-foreground: #F5F5F4;
+
+  /* FIXED: Changed from rgba to a solid, opaque hex */
+  --primary: #d8ffc7; /* Your signature Tea Green */
+  --primary-foreground: #0a0a0a;
+  --accent: #d8ffc7;
+  --accent-foreground: #0a0a0a;
+  --border: #262626; /* Solid border for definition */
+  --muted: #1c1c1e;
+  --muted-foreground: #A8A8A3;
+  --green: #d8ffc7;
+  --b: rgb(148, 117, 231);
+
+  /* Tangram-specific tokens (dark) */
+  --tile: #1A1A19;
+  --tile-border: rgba(255, 255, 255, 0.08);
+  --text-secondary: #A8A8A3;
+  --skills-bg: #1E3A1A; /* deep green */
+  --skills-fg: #C8F5A8; /* mint text */
+  --skills-marquee: #C8F5A8;
+  --cta-bg: #F5F5F4; /* off-white */
+  --cta-fg: #111111;
+  --cta-green: #34D399;
+  --journey-accent: #34D399;
+  --amber: #FBBF24;
+}
+
+@theme inline {
+  --color-white: var(--white);
+  --color-green: var(--green);
+  --color-b: var(--b);
+  --color-v: var(--v);
+  --color-r: var(--r);
+  --color-o: var(--o);
+  --color-y: var(--y);
+  --color-c: var(--c);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-tile: var(--tile);
+  --color-tile-border: var(--tile-border);
+  --color-text-secondary: var(--text-secondary);
+  --color-skills-bg: var(--skills-bg);
+  --color-skills-fg: var(--skills-fg);
+  --color-skills-marquee: var(--skills-marquee);
+  --color-cta-bg: var(--cta-bg);
+  --color-cta-fg: var(--cta-fg);
+  --color-cta-green: var(--cta-green);
+  --color-journey-accent: var(--journey-accent);
+  --color-amber: var(--amber);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html,
+  body {
+    overflow-x: clip;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
+
+/* --- Tangram bento grid (desktop >= 1024px) --- */
+.bento-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr 1.8fr 1fr;
+  grid-template-rows: minmax(245px, auto) minmax(250px, auto) minmax(250px, auto);
+  grid-template-areas:
+    "name skills clock"
+    "projects journey resume"
+    "projects journey contact";
+}
+
+.bento-name { grid-area: name; }
+.bento-skills { grid-area: skills; }
+.bento-clock { grid-area: clock; }
+.bento-projects { grid-area: projects; }
+.bento-journey { grid-area: journey; }
+.bento-resume { grid-area: resume; }
+.bento-contact { grid-area: contact; }
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .bento-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "name name"
+      "skills skills"
+      "projects resume"
+      "clock contact"
+      "journey journey";
+  }
+}
+
+@media (max-width: 639px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "name"
+      "resume"
+      "projects"
+      "skills"
+      "journey"
+      "clock"
+      "contact";
+  }
+}

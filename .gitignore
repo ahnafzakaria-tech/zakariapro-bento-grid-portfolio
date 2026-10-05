@@ -1,0 +1,6 @@
+node_modules
+dist
+.env
+.vscode
+dev-server*.out.log
+dev-server*.err.log
