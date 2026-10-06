@@ -84,7 +84,7 @@ export function ResumeTile() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
               </span>
-              <span className="text-[10px] font-black uppercase tracking-widest text-black group-hover:text-[#FFD700] transition-colors">
+              <span className="text-[11px] font-black uppercase tracking-widest text-black group-hover:text-[#FFD700] transition-colors">
                 {header.status}
               </span>
             </div>
@@ -97,11 +97,11 @@ export function ResumeTile() {
               </h3>
             </div>
 
-            <div className="w-full h-6 bg-black rounded flex items-center overflow-hidden relative border border-black/10">
+            <div className="w-full h-8 bg-black rounded flex items-center overflow-hidden relative border border-black/10">
               <div className="hazard-tape w-full h-full opacity-80" />
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="bg-black px-2 text-[#FFD700] text-[10px] font-black uppercase tracking-[0.2em]">
-                  VIEW CAREER TIMELINE
+                <span className="bg-black px-3 py-1 text-[#FFD700] text-sm font-black uppercase tracking-[0.15em] rounded-full shadow">
+                  VIEW RESUME
                 </span>
               </div>
             </div>
@@ -143,10 +143,10 @@ export function ResumeTile() {
                 <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-end mb-12 md:mb-16 border-b border-border pb-8">
                   <div>
                     <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-4">
-                      <span className="px-3 py-1 rounded bg-[#FFD700] text-black text-[10px] font-black uppercase tracking-widest">
+                      <span className="px-3 py-1 rounded bg-[#FFD700] text-black text-[11px] font-black uppercase tracking-widest">
                         Verified Profile
                       </span>
-                      <span className="px-3 py-1 rounded border border-border text-muted-foreground text-[10px] font-black uppercase tracking-widest">
+                      <span className="px-3 py-1 rounded border border-border text-muted-foreground text-[11px] font-black uppercase tracking-widest">
                         Last Updated: {header.lastUpdated}
                       </span>
                     </div>

@@ -21,7 +21,7 @@ const journeyStats = [
 ];
 
 const journeyMilestones = [
-  { leftPct: 8, label: "2017 Law" },
+  { leftPct: 8, label: "2022 LL.M / Apprenticeship" },
   { leftPct: 48, label: "2022 EPC" },
   { leftPct: 85, label: "2025 Starah" },
 ];
@@ -151,7 +151,7 @@ export function StoryTile() {
         onClick={() => setIsOpen(true)}
       >
         {/* 1. ANIMATED GRAPH BACKGROUND */}
-        <div className="absolute inset-x-0 bottom-0 h-2/3 pointer-events-none opacity-30 group-hover:opacity-50 transition-opacity duration-500">
+        <div className="absolute inset-x-0 bottom-0 h-[75%] pointer-events-none opacity-30 group-hover:opacity-50 transition-opacity duration-500">
           <svg
             className="w-full h-full"
             viewBox="0 0 400 150"
@@ -202,7 +202,7 @@ export function StoryTile() {
         </div>
 
         {/* Milestones overlay (HTML, not scaled by the SVG) */}
-        <div className="absolute inset-x-0 bottom-0 h-2/3 pointer-events-none z-0">
+        <div className="absolute inset-x-0 bottom-0 h-[75%] pointer-events-none z-0">
           {journeyMilestones.map((m, idx) => {
             const topPct = curveTopPct(m.leftPct);
             const isLast = idx === journeyMilestones.length - 1;
@@ -219,7 +219,7 @@ export function StoryTile() {
                       if (el) labelRefs.current.set(m.label, el);
                       else labelRefs.current.delete(m.label);
                     }}
-                    className={`absolute top-full mt-1.5 text-[11px] font-medium text-text-secondary whitespace-nowrap ${
+                    className={`absolute top-full mt-1.5 text-xs font-medium text-text-secondary whitespace-nowrap ${
                       isLast ? "right-0" : "left-1/2 -translate-x-1/2"
                     } ${labelsHidden[m.label] ? "invisible" : ""}`}
                   >
@@ -237,7 +237,7 @@ export function StoryTile() {
             <div className="bg-journey-accent/15 text-journey-accent p-3 rounded-2xl shadow-lg">
               <History size={24} strokeWidth={2.5} />
             </div>
-            <div className="flex items-center gap-1 px-3 py-1 rounded-full border border-journey-accent/20 bg-journey-accent/10 text-journey-accent text-[10px] font-bold uppercase tracking-widest">
+            <div className="flex items-center gap-1 px-3 py-1 rounded-full border border-journey-accent/20 bg-journey-accent/10 text-journey-accent text-[11px] font-bold uppercase tracking-widest">
               <TrendingUp size={12} />
               Growth
             </div>
@@ -322,7 +322,7 @@ export function StoryTile() {
                   <div className="flex gap-3">
                     <button
                       onClick={() => setIsNewestFirst(!isNewestFirst)}
-                      className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-3 rounded-full border border-border bg-secondary/50 hover:bg-secondary text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-3 rounded-full border border-border bg-secondary/50 hover:bg-secondary text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-colors"
                     >
                       <ArrowDownUp size={14} />
                       {isNewestFirst ? "Newest First" : "Oldest First"}

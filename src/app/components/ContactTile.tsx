@@ -143,10 +143,10 @@ export function ContactTile() {
         </div>
 
         <div className="relative z-10 mt-auto pt-4">
-          <h3 className="text-3xl sm:text-4xl font-black uppercase tracking-tighter leading-[0.9] text-cta-fg">
+          <h3 className="text-3xl sm:text-4xl font-black uppercase tracking-tighter leading-[0.9] text-cta-fg bg-cta-bg">
             Get In
           </h3>
-          <h3 className="text-3xl sm:text-4xl font-black uppercase tracking-tighter leading-[0.9] text-cta-green mt-0.5">
+          <h3 className="text-3xl sm:text-4xl font-black uppercase tracking-tighter leading-[0.9] text-cta-green bg-cta-bg mt-0.5">
             Touch
           </h3>
         </div>

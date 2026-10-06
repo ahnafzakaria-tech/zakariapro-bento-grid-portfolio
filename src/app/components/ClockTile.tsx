@@ -224,10 +224,10 @@ export function ClockTile() {
       {/* Top Row: Labels & Status */}
       <div className="flex justify-between items-start gap-3 z-10">
         <div className="flex flex-col gap-1">
-          <span className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-muted-foreground font-bold">
+          <span className="text-[11px] sm:text-xs uppercase tracking-[0.2em] text-muted-foreground font-bold">
             Riyadh, KSA · AST (UTC+3)
           </span>
-          <span className="text-[10px] font-bold text-primary/80 uppercase tracking-wider">
+          <span className="text-[11px] font-bold text-primary/80 uppercase tracking-wider">
             {dateLine}
           </span>
         </div>
@@ -245,7 +245,7 @@ export function ClockTile() {
               />
             </span>
             <span
-              className={`text-[10px] font-bold uppercase tracking-widest ${
+              className={`text-[11px] font-bold uppercase tracking-widest ${
                 online ? "text-green" : "text-amber"
               }`}
             >
@@ -253,43 +253,50 @@ export function ClockTile() {
             </span>
           </div>
           {!online && awayLine && (
-            <span className="hidden min-[400px]:block text-[9px] font-bold uppercase tracking-wider text-muted-foreground whitespace-nowrap">
+            <span className="hidden min-[400px]:block text-[11px] font-bold uppercase tracking-wider text-muted-foreground whitespace-nowrap">
               {awayLine}
             </span>
           )}
         </div>
       </div>
 
-      {/* 24-hour progress bar */}
-      <div className="relative z-10 my-3 w-full h-[3px] rounded-full bg-muted-foreground/20 overflow-hidden">
-        <div
-          className="h-full rounded-full bg-accent transition-[width] duration-500 ease-linear"
-          style={{ width: `${dayProgress * 100}%` }}
-        />
-      </div>
-
-      {/* Main time: Riyadh */}
-      <div className="relative z-10">
-        <div className="flex items-baseline gap-1 text-card-foreground group-hover:text-primary transition-colors duration-300">
-          <span className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter leading-none tabular-nums">
-            {parts ? `${parts.hour12}:${String(parts.minute).padStart(2, "0")}` : "--:--"}
-          </span>
-
-          <span className="text-xl sm:text-2xl font-bold text-muted-foreground/60 w-[30px] tabular-nums">
-            {parts ? String(parts.second).padStart(2, "0") : "--"}
-          </span>
-
-          <span className="text-lg sm:text-xl font-black uppercase tracking-widest ml-1">
-            {parts ? parts.ampm : ""}
+      {/* Progress + time */}
+      <div className="relative z-10 mt-auto">
+        <div className="mb-1">
+          <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-muted-foreground">
+            Day progress
           </span>
         </div>
+        <div className="w-full h-[3px] rounded-full bg-muted-foreground/20 overflow-hidden">
+          <div
+            className="h-full rounded-full bg-accent transition-[width] duration-500 ease-linear"
+            style={{ width: `${dayProgress * 100}%` }}
+          />
+        </div>
 
-        {/* Visitor's local time (hidden when zone is Riyadh or undetectable) */}
-        {showLocalLine && now && (
-          <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mt-2 truncate">
-            Your time {localTimeFormatter.format(now)} · {formatDiffHours(localInfo!.diff!)}
-          </p>
-        )}
+        {/* Main time: Riyadh */}
+        <div className="mt-3">
+          <div className="flex items-baseline gap-1 text-card-foreground group-hover:text-primary transition-colors duration-300">
+            <span className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter leading-none tabular-nums">
+              {parts ? `${parts.hour12}:${String(parts.minute).padStart(2, "0")}` : "--:--"}
+            </span>
+
+            <span className="text-xl sm:text-2xl font-bold text-muted-foreground/60 w-[30px] tabular-nums">
+              {parts ? String(parts.second).padStart(2, "0") : "--"}
+            </span>
+
+            <span className="text-lg sm:text-xl font-black uppercase tracking-widest ml-1">
+              {parts ? parts.ampm : ""}
+            </span>
+          </div>
+
+          {/* Visitor's local time (hidden when zone is Riyadh or undetectable) */}
+          {showLocalLine && now && (
+            <p className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider mt-2 truncate">
+              Your time {localTimeFormatter.format(now)} · {formatDiffHours(localInfo!.diff!)}
+            </p>
+          )}
+        </div>
       </div>
 
       {/* Background Glow */}

@@ -294,18 +294,24 @@ export default function App() {
             {renderTile(
               "resume",
               "Resume",
-              "bento-resume min-h-[160px] md:min-h-0",
+              "bento-resume min-h-[160px] md:min-h-0 bg-tile border border-tile-border",
               <ResumeTile />,
             )}
 
             {renderTile(
               "contact",
               "Contact",
-              "bento-contact min-h-[160px] md:min-h-0",
+              "bento-contact min-h-[160px] md:min-h-0 bg-tile border border-tile-border",
               <ContactTile />,
             )}
           </div>
         </main>
+
+        <footer className="w-full max-w-[1400px] pt-10 pb-4 text-center">
+          <p className="text-xs text-muted-foreground">
+            © {new Date().getFullYear()} {FULL_NAME}. All rights reserved.
+          </p>
+        </footer>
 
         <SEOContentIndex />
       </div>

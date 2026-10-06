@@ -26,8 +26,8 @@ const marqueeStyles = `
   }
   .bento-marquee {
     animation: bento-marquee 28s linear infinite;
-    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent);
+    mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent);
   }
   .group:hover .bento-marquee,
   .group:focus-within .bento-marquee {
@@ -100,7 +100,7 @@ export function TechStackTile({ active = true }: { active?: boolean }) {
         {/* COOL ANIMATION: The Infinite Marquee */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 flex items-center pointer-events-none opacity-60"
+          className="absolute inset-0 flex items-center pointer-events-none opacity-100"
         >
           <div
             className={`flex gap-4 whitespace-nowrap text-skills-marquee ${
@@ -119,6 +119,16 @@ export function TechStackTile({ active = true }: { active?: boolean }) {
         </div>
 
         <div className="z-10 mt-auto">
+          <div className="flex flex-wrap gap-1.5 mb-3">
+            {["Thinkproject", "Samsung Knox", "Oracle Aconex"].map((chip) => (
+              <span
+                key={chip}
+                className="px-2.5 py-1 rounded-full bg-foreground text-background text-[11px] sm:text-xs font-bold uppercase tracking-wider"
+              >
+                {chip}
+              </span>
+            ))}
+          </div>
           <h3 className="text-inherit text-2xl sm:text-3xl lg:text-4xl font-black uppercase tracking-tighter leading-none mb-1">
             Skills
           </h3>
@@ -127,7 +137,7 @@ export function TechStackTile({ active = true }: { active?: boolean }) {
           </p>
         </div>
 
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('/noise.svg')]" />
       </motion.button>
 
       <Portal>
@@ -201,7 +211,7 @@ export function TechStackTile({ active = true }: { active?: boolean }) {
                       </div>
 
                       {/* FIXED: Reduced text size slightly on mobile so long names fit */}
-                      <span className="text-foreground font-black text-[10px] lg:text-sm uppercase tracking-wide group-hover:text-primary transition-colors leading-snug break-words">
+                      <span className="text-foreground font-black text-[11px] lg:text-sm uppercase tracking-wide group-hover:text-primary transition-colors leading-snug break-words">
                         {tech.name}
                       </span>
                     </motion.div>

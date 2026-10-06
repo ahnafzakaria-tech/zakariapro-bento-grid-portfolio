@@ -28,10 +28,10 @@
   --text-secondary: #4b5563;
   --skills-bg: #d8ffc7; /* mint green */
   --skills-fg: #11151c;
-  --skills-marquee: #4F8A46;
+  --skills-marquee: #1F5B33;
   --cta-bg: #111111;
   --cta-fg: #ffffff;
-  --cta-green: #16A34A;
+  --cta-green: #10B981;
   --journey-accent: #059669;
   --amber: #B45309;
 }
@@ -64,7 +64,7 @@
   --skills-marquee: #C8F5A8;
   --cta-bg: #F5F5F4; /* off-white */
   --cta-fg: #111111;
-  --cta-green: #34D399;
+  --cta-green: #10B981;
   --journey-accent: #34D399;
   --amber: #FBBF24;
 }
