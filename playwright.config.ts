@@ -1,15 +1,22 @@
 import { defineConfig, devices } from '@playwright/test';
+import os from 'os';
+import path from 'path';
+
+const tempReportDir = path.join(os.tmpdir(), 'playwright-report');
+const tempOutputDir = path.join(os.tmpdir(), 'playwright-test-results');
 
 export default defineConfig({
   testDir: './e2e',
+  outputDir: tempOutputDir,
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: 1,
   workers: 2,
-  reporter: [['list'], ['html', { open: 'never' }]],
+  reporter: [['list'], ['html', { outputFolder: tempReportDir, open: 'never' }]],
   use: {
     baseURL: 'http://localhost:4173',
-    trace: 'retain-on-failure',
+    trace: 'off',
+    video: 'off',
     screenshot: 'only-as-needed',
   },
   projects: [
