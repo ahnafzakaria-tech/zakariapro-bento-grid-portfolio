@@ -1,0 +1,11 @@
+.git
+.github
+node_modules
+dist
+playwright-report
+test-results
+qa-screenshots
+e2e
+temp_index.txt
+qa-results.json
+*.log

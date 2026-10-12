@@ -1,6 +1,10 @@
-import { test, expect, devices } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import * as fs from 'fs';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const VIEWPORTS = [
   { name: 'desktop-1920', w: 1920, h: 1080 },
@@ -25,27 +29,23 @@ function slugify(str: string): string {
 
 for (const vp of VIEWPORTS) {
   for (const theme of THEMES) {
-    test(`viewport: ${vp.name} theme: ${theme} — full-page screenshot`, async ({ page, browser }, info) => {
-      test.skip(info.retry > 0, 'skip screenshot on retry to avoid duplicate writes');
+    test(`viewport: ${vp.name} theme: ${theme} — full-page screenshot`, async ({ page }, info) => {
       await page.setViewportSize({ width: vp.w, height: vp.h });
       await page.goto('/');
       await page.evaluate((t) => {
         (document.documentElement.classList as any)[t === 'dark' ? 'add' : 'remove']('dark');
         document.documentElement.setAttribute('data-theme', t);
       }, theme);
-      // Wait for the intro animation to finish
       await page.waitForSelector('[data-tile="name"]', { state: 'visible' });
       await page.waitForTimeout(1500);
 
-      // Check no horizontal overflow
       const scrollWidth = await page.evaluate(() => document.documentElement.scrollWidth);
       const clientWidth = await page.evaluate(() => document.documentElement.clientWidth);
       const overflow = scrollWidth > clientWidth;
       if (overflow) {
-        console.warn(`[${vp.name}/${theme}] horizontal overflow detected: scrollWidth=${scrollWidth} > clientWidth=${clientWidth}`);
+        console.warn(`[${vp.name}/${theme}] horizontal overflow: scrollWidth=${scrollWidth} > clientWidth=${clientWidth}`);
       }
 
-      // Capture screenshot
       if (!fs.existsSync(SCREENSHOT_DIR)) {
         fs.mkdirSync(SCREENSHOT_DIR, { recursive: true });
       }

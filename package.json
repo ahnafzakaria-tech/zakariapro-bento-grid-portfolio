@@ -1,5 +1,5 @@
 {
-  "name": "@figma/my-make-file",
+  "name": "zakariapro-bento-grid-portfolio",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -96,5 +96,6 @@
     "overrides": {
       "vite": "6.3.5"
     }
-  }
+  },
+  "author": "Zakaria Hossain"
 }

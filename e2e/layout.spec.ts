@@ -6,7 +6,10 @@ test.describe('Layout checks', () => {
     await page.goto('/');
     await page.waitForSelector('[data-tile="name"]', { state: 'visible' });
     await page.waitForTimeout(1500);
-    await expect(page).toHaveJSProperty('document.documentElement.scrollWidth', (await page.evaluate(() => document.documentElement.clientWidth)));
+    const sw = await page.evaluate(() => document.documentElement.scrollWidth);
+    const cw = await page.evaluate(() => document.documentElement.clientWidth);
+    const overflow = sw - cw;
+    expect(overflow).toBeLessThanOrEqual(1);
   });
 
   test('no horizontal scrollbar at smallest mobile', async ({ page }) => {

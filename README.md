@@ -1,6 +1,6 @@
-# 🚀 Devdeep Saha — Portfolio
+# 🚀 Zakaria Hossain — Portfolio
 
-A modern interactive developer portfolio showcasing projects, skills, experiments, and creative work.
+A modern interactive EPC document control portfolio showcasing projects, skills, experiments, and creative work.
 
 Built with a focus on:
 

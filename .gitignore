@@ -5,3 +5,8 @@ dist
 dev-server*.out.log
 dev-server*.err.log
 .vercel
+playwright-report
+test-results
+qa-screenshots
+temp_index.txt
+qa-results.json
