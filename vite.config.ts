@@ -55,7 +55,6 @@ function sitemapPlugin(): Plugin {
         { loc: "/", priority: "1.0" },
         { loc: "/projects", priority: "0.9" },
         { loc: "/story", priority: "0.8" },
-        { loc: "/learning", priority: "0.7" },
       ];
 
       const projectRoutes = projectTitles.map((t) => ({
@@ -63,12 +62,7 @@ function sitemapPlugin(): Plugin {
         priority: "0.8",
       }));
 
-      const blogRoutes = hobbyTitles.map((t) => ({
-        loc: `/blog/${slugify(t)}`,
-        priority: "0.8",
-      }));
-
-      const all = [...staticRoutes, ...projectRoutes, ...blogRoutes];
+      const all = [...staticRoutes, ...projectRoutes];
       // De-dupe by loc
       const seen = new Set<string>();
       const unique = all.filter((r) => {
