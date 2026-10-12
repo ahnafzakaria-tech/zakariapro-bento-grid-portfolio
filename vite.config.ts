@@ -54,7 +54,6 @@ function sitemapPlugin(): Plugin {
       const staticRoutes = [
         { loc: "/", priority: "1.0" },
         { loc: "/projects", priority: "0.9" },
-        { loc: "/blog", priority: "0.9" },
         { loc: "/story", priority: "0.8" },
         { loc: "/learning", priority: "0.7" },
       ];
