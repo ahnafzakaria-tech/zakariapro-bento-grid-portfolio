@@ -12,8 +12,8 @@
   --accent-foreground: #11151c;
   --border: rgba(17, 21, 28, 0.1);
   --muted: #f4f1f0;
-  --muted-foreground: #6b7280;
-  --green: #059669;
+  --muted-foreground: #3a3f4a;
+  --green: #035040;
   --b: #6434e9ff;
   --v: #2c7ce5ff;
   --r: #49cc5cff;
@@ -25,14 +25,14 @@
   /* Tangram-specific tokens (light) */
   --tile: #ffffff;
   --tile-border: rgba(17, 21, 28, 0.1);
-  --text-secondary: #4b5563;
+  --text-secondary: #3a3f4a;
   --skills-bg: #d8ffc7; /* mint green */
   --skills-fg: #11151c;
   --skills-marquee: #1F5B33;
   --cta-bg: #111111;
   --cta-fg: #ffffff;
-  --cta-green: #10B981;
-  --journey-accent: #059669;
+  --cta-green: #047843;
+  --journey-accent: #046450;
   --amber: #B45309;
 }
 

@@ -219,7 +219,7 @@ export function ClockTile() {
   return (
     <div
       aria-label={`Current time in Riyadh. ${statusAria}`}
-      className="h-full w-full bg-card border border-border rounded-[2rem] p-6 flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 relative overflow-hidden"
+      className="h-full w-full bg-card border border-border rounded-[2rem] p-6 flex flex-col justify-between group hover:border-primary/50 transition-all duration-300 relative overflow-hidden isolate"
     >
       {/* Top Row: Labels & Status */}
       <div className="flex justify-between items-start gap-3 z-10">
@@ -227,7 +227,7 @@ export function ClockTile() {
           <span className="text-[11px] sm:text-xs uppercase tracking-[0.2em] text-muted-foreground font-bold">
             Riyadh, KSA · AST (UTC+3)
           </span>
-          <span className="text-[11px] font-bold text-primary/80 uppercase tracking-wider">
+          <span className="text-[11px] font-bold text-foreground uppercase tracking-wider">
             {dateLine}
           </span>
         </div>
@@ -281,7 +281,7 @@ export function ClockTile() {
               {parts ? `${parts.hour12}:${String(parts.minute).padStart(2, "0")}` : "--:--"}
             </span>
 
-            <span className="text-xl sm:text-2xl font-bold text-muted-foreground/60 w-[30px] tabular-nums">
+            <span className="text-xl sm:text-2xl font-bold text-muted-foreground/90 w-[30px] tabular-nums">
               {parts ? String(parts.second).padStart(2, "0") : "--"}
             </span>
 

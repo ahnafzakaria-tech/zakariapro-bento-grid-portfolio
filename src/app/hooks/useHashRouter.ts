@@ -71,20 +71,6 @@ export function useHashRouter(
     }
   }, [isOpen, path]);
 
-  useEffect(() => {
-    if (!isOpen) return;
-
-    const onPopState = () => {
-      const current = readCurrent();
-      if (!matches(current)) {
-        onBack();
-      }
-    };
-
-    window.addEventListener("popstate", onPopState);
-    return () => window.removeEventListener("popstate", onPopState);
-  }, [isOpen, path, onBack]);
-
   const close = useCallback(() => {
     const current = readCurrent();
     if (matches(current)) {
@@ -104,7 +90,40 @@ export function useHashRouter(
     }
   }, [path, onBack, navigate]);
 
+  // Keep closeRef.current in sync so the Escape handler always calls the
+  // latest version of ``close``.
+  const closeRef = useRef(close);
+  useEffect(() => {
+    closeRef.current = close;
+  }, [close]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const onPopState = () => {
+      const current = readCurrent();
+      if (!matches(current)) {
+        onBack();
+      }
+    };
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        e.stopPropagation();
+        closeRef.current();
+      }
+    };
+
+    window.addEventListener("popstate", onPopState);
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      window.removeEventListener("popstate", onPopState);
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [isOpen, path]);
+
   return close;
+
 }
 
 export function useHashInit(

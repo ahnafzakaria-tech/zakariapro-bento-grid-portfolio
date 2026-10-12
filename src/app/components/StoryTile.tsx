@@ -219,7 +219,7 @@ export function StoryTile() {
                       if (el) labelRefs.current.set(m.label, el);
                       else labelRefs.current.delete(m.label);
                     }}
-                    className={`absolute top-full mt-1.5 text-xs font-medium text-text-secondary whitespace-nowrap ${
+                    className={`absolute top-full mt-1.5 text-xs font-medium text-text-secondary whitespace-nowrap bg-card px-1.5 py-0.5 rounded-md ${
                       isLast ? "right-0" : "left-1/2 -translate-x-1/2"
                     } ${labelsHidden[m.label] ? "invisible" : ""}`}
                   >
@@ -237,7 +237,7 @@ export function StoryTile() {
             <div className="bg-journey-accent/15 text-journey-accent p-3 rounded-2xl shadow-lg">
               <History size={24} strokeWidth={2.5} />
             </div>
-            <div className="flex items-center gap-1 px-3 py-1 rounded-full border border-journey-accent/20 bg-journey-accent/10 text-journey-accent text-[11px] font-bold uppercase tracking-widest">
+            <div className="flex items-center gap-1 px-3 py-1 rounded-full border border-journey-accent/40 bg-journey-accent/30 text-journey-accent text-[11px] font-bold uppercase tracking-widest">
               <TrendingUp size={12} />
               Growth
             </div>

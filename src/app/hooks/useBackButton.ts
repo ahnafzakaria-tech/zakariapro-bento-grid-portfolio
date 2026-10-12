@@ -18,10 +18,19 @@ export function useBackButton(isOpen: boolean, close: () => void) {
       closeRef.current(); // Uses the ref instead of the changing function
     };
 
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        e.stopPropagation();
+        closeRef.current();
+      }
+    };
+
     window.addEventListener("popstate", handleBackButton);
+    window.addEventListener("keydown", handleEscape);
 
     return () => {
       window.removeEventListener("popstate", handleBackButton);
+      window.removeEventListener("keydown", handleEscape);
       if (window.location.hash === "#open") {
         window.history.back();
       }

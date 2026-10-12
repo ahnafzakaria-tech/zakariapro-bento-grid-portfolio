@@ -133,7 +133,7 @@ export function ContactTile() {
             <Mail size={24} />
           </div>
 
-          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 dark:bg-black/10 text-[10px] font-bold uppercase tracking-wider">
+          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/10 dark:bg-black/10 text-[10px] font-bold uppercase tracking-wider">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green"></span>
@@ -152,7 +152,7 @@ export function ContactTile() {
         </div>
 
         <ArrowUpRight
-          className="absolute top-5 right-5 text-cta-fg/60 group-hover:text-cta-fg opacity-0 group-hover:opacity-100 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+          className="absolute top-5 right-5 text-cta-fg/80 group-hover:text-cta-fg opacity-0 group-hover:opacity-100 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
           size={24}
         />
       </motion.button>

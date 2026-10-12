@@ -721,6 +721,10 @@ export function CompactProjectsTile() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
+              onKeyDown={(e) => {
+                if (e.key === "Escape") closeLightbox();
+              }}
+              tabIndex={-1}
             >
               <div className="w-full p-6 flex justify-between items-center z-50 pointer-events-none h-[80px]">
                 <div className="pointer-events-auto">

@@ -1,95 +1,51 @@
-# Devdeep Saha — Portfolio
+# Zakaria Hossain — Portfolio
 
-> Portfolio of Devdeep Saha, a designer and web developer based in Kolkata, India. Built as a bento-grid single-page app at https://devdeepsaha.in, but every piece of content is also reachable as a standalone, indexable page. Prefer the real URLs below over the hash-based modal URLs.
+> Portfolio of Zakaria Hossain, a Project Document Controller and EPC & EDMS specialist based in Riyadh, Saudi Arabia. Built as a bento-grid single-page app at https://zakariapro.vercel.app, but every piece of content is also reachable as a standalone, indexable page. Prefer the real URLs below over the hash-based modal URLs.
 
 ## About
 
-Devdeep Saha is a "designer who codes" — a full-stack developer with a strong visual-design and motion-design practice. Available for immediate joining. Alumni of Abacus Institute of Engineering and Management.
+Zakaria Hossain is a "Project Document Controller" with almost 4 years of experience managing engineering and construction documentation on large-scale EPC power generation and renewable energy projects across Saudi Arabia and Bangladesh. Legal background (LL.B, LL.M). Currently based in Riyadh, Saudi Arabia.
 
-## Stack
+## Skills & Tools
 
-React, Next.js, Laravel, Flask, Tailwind CSS, TypeScript, MySQL, Android Studio, Flutter, HTML, CSS, JavaScript. Motion (Framer Motion), Swiper, Radix UI, Tailwind v4.
+Thinkproject, Samsung Knox Portal (S-PMIS), Aconex, document coding & numbering, drawing & revision control, transmittal preparation & tracking, document registration & classification, MOM preparation & circulation, Method Statement (MOS) review, Risk Assessment (RA) coordination, MAR tracking, Field Change Request (FCR) control, contract & regulatory compliance, approval routing, project close-out & handover packages.
 
 ## Real URLs (canonical, indexable)
 
 ### Landing and section pages
 
-- [Home (bento grid)](https://devdeepsaha.in/)
-- [Projects gallery](https://devdeepsaha.in/projects)
-- [Writing / blog index](https://devdeepsaha.in/blog)
-- [My Evolution — story timeline](https://devdeepsaha.in/story)
-- [Currently Learning](https://devdeepsaha.in/learning)
-
-### Individual blog posts
-
-- [Growing Up Around Music](https://devdeepsaha.in/blog/growing-up-around-music)
-- [How I Fell Into Filmography](https://devdeepsaha.in/blog/how-i-fell-into-filmography)
-- [Stories Within Stories — how I got into reading and writing](https://devdeepsaha.in/blog/stories-within-stories)
-- [Reading Journey — annotated booklist](https://devdeepsaha.in/blog/reading-journey)
+- [Home (bento grid)](https://zakariapro.vercel.app/)
+- [Projects gallery](https://zakariapro.vercel.app/projects)
+- [Career Timeline](https://zakariapro.vercel.app/story)
+- [Currently Learning](https://zakariapro.vercel.app/learning)
 
 ### Individual project pages
 
-Web projects:
-- [Potho Prodorshok](https://devdeepsaha.in/projects/potho-prodorshok)
-- [Bharat Coking Coal Ltd.](https://devdeepsaha.in/projects/bharat-coking-coal-ltd)
-- [Modular Portfolio System](https://devdeepsaha.in/projects/modular-portfolio-system)
-- [Old Portfolio Website](https://devdeepsaha.in/projects/old-portfolio-website)
-- [Tools By Deep](https://devdeepsaha.in/projects/tools-by-deep)
-- [LeadFlow](https://devdeepsaha.in/projects/leadflow)
-- [Arova Technologies](https://devdeepsaha.in/projects/arova-technologies)
-- [Dev Web Studio](https://devdeepsaha.in/projects/dev-web-studio)
-
-3D projects (Blender):
-- [Donut](https://devdeepsaha.in/projects/donut)
-- [NCERT](https://devdeepsaha.in/projects/ncert)
-- [World outside the window](https://devdeepsaha.in/projects/world-outside-the-window)
-- [Jello Dice](https://devdeepsaha.in/projects/jello-dice)
-- [Indoor scene](https://devdeepsaha.in/projects/indoor-scene)
-- [Number animation](https://devdeepsaha.in/projects/number-animation)
-- [Cube animation](https://devdeepsaha.in/projects/cube-animation)
-- [Car rigging](https://devdeepsaha.in/projects/car-rigging)
-- [Winter scene](https://devdeepsaha.in/projects/winter-scene)
-- [Pokeball modelling](https://devdeepsaha.in/projects/pokeball-modelling)
-- [Water physics simulation](https://devdeepsaha.in/projects/water-physics-simulation)
-- [Product animation (Gun)](https://devdeepsaha.in/projects/product-animation-gun)
-- [Lamp modeling and lighting](https://devdeepsaha.in/projects/lamp-modeling-and-lighting)
-
-Graphics projects:
-- [Notemation — animation using PowerPoint](https://devdeepsaha.in/projects/animation-using-powerpoint-notemation)
-- [Netflix poster remakes](https://devdeepsaha.in/projects/netflix-poster-remakes)
-- [Magazine cover (Machinage)](https://devdeepsaha.in/projects/magazine-cover-machinage)
-- [Magazine cover (Machinage 4.0)](https://devdeepsaha.in/projects/magazine-cover-machinage-4-0)
-- [Book cover (The Hostel Door)](https://devdeepsaha.in/projects/book-cover-the-hostel-door)
-- [Profile picture design](https://devdeepsaha.in/projects/profile-picture-design)
-- [Logo collection](https://devdeepsaha.in/projects/logo-collection)
-- [Poster collection](https://devdeepsaha.in/projects/poster-collection)
-- [Tee-shirt design](https://devdeepsaha.in/projects/tee-shirt-design)
-- [Poster series (APL)](https://devdeepsaha.in/projects/poster-series-apl)
+- [Starah 2GW Onshore Wind Project (CEEC)](https://zakariapro.vercel.app/projects/starah-2gw-onshore-wind-project-ceec)
+- [Meghnaghat 718MW Combined Cycle Power Plant (Samsung C&T)](https://zakariapro.vercel.app/projects/meghnaghat-718mw-combined-cycle-power-plant-samsung-ct)
+- [Legal Apprenticeship — Dhaka Judge Court](https://zakariapro.vercel.app/projects/legal-apprenticeship-dhaka-judge-court)
 
 ## Hash-based modal URLs (still supported, but not canonical)
 
 The bento tiles on the home page open modals with hash URLs. These work but the canonical version of the same content lives at the real URLs above.
 
 - `#projects` / `#projects/<id>` → prefer `/projects` / `/projects/<slug>`
-- `#playground` → prefer `/blog` for blog posts; individual playground media items remain hash-only
 - `#learning` → prefer `/learning`
 
 ## Structured data
 
 - `/` embeds Person, Organization, WebSite, and an ItemList of SiteNavigationElement entries
 - `/projects/<slug>` embeds a CreativeWork JSON-LD entity
-- `/blog/<slug>` embeds a BlogPosting JSON-LD entity
 
 ## Contact
 
-- Email: devdeep120205@gmail.com
-- GitHub: https://github.com/devdeepsaha
-- LinkedIn: https://www.linkedin.com/in/devdeep-saha-3b4570260/
-- Instagram: https://instagram.com/devdeepsaha
+- Email: ahnafzakariaaz@gmail.com
+- GitHub: https://github.com/ahnafzakariaaz
+- LinkedIn: https://www.linkedin.com/in/workwithzakariapro/
+- WhatsApp: https://wa.me/8801517813524
 
 ## Notes for agents
 
 - The site is a client-side React app served via SPA fallback. Any path returns `index.html`; the router then renders the matching page.
-- The sitemap at `/sitemap.xml` is auto-generated at build time from the project and blog data files.
 - Every content page includes per-page `<title>`, `<meta name="description">`, `<link rel="canonical">`, and Open Graph tags.
 - The home page also contains a large visually-hidden section (`sr-only`) that dumps all portfolio content as semantic HTML for crawlers that don't render JavaScript.

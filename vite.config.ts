@@ -4,7 +4,7 @@ import fs from "fs";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 
-const SITE_URL = "https://devdeepsaha.in";
+const SITE_URL = "https://zakariapro.vercel.app";
 
 function slugify(input: string): string {
   return input

@@ -254,7 +254,7 @@ export default function App() {
         >
           <div
             ref={gridRef}
-            className={`bento-grid overflow-x-clip ${enabled ? "" : "pointer-events-none"}`}
+            className="bento-grid overflow-x-clip"
           >
             {renderTile(
               "name",
@@ -307,7 +307,7 @@ export default function App() {
           </div>
         </main>
 
-        <footer className="w-full max-w-[1400px] pt-10 pb-4 text-center">
+        <footer className="w-full max-w-[1400px] pt-10 pb-4 text-center bg-background">
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} {FULL_NAME}. All rights reserved.
           </p>

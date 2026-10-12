@@ -147,14 +147,14 @@ export function NameTile() {
             <canvas ref={canvasRef} />
           </div>
 
-          <div className="flex items-center gap-3 mt-2">
+          <div className="flex items-center gap-3 mt-2 bg-card">
             <div className="h-[2px] w-8 sm:w-12 bg-current transition-all duration-300 group-hover:w-16 opacity-80"></div>
             <p className="text-[10px] sm:text-xs lg:text-sm font-bold uppercase tracking-[0.2em] opacity-60 group-hover:opacity-100 transition-opacity">
               Project Document Controller
             </p>
           </div>
 
-          <div className="flex items-center gap-1.5 mt-3 text-text-secondary">
+          <div className="flex items-center gap-1.5 mt-3 text-text-secondary bg-card">
             <MapPin size={14} className="shrink-0" />
             <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em]">
               CEEC · Riyadh, KSA
